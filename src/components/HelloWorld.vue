@@ -73,7 +73,9 @@ img{
   width: 80%;
 }
 button{
-  border-radius:30%;
+  border-radius:10%;
   background-color: rgb(23, 139, 233);
+  color: aliceblue;
+  size:30px;
 }
 </style>
