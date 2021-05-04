@@ -3,34 +3,32 @@
     <h1>{{ msg }}</h1>
 
   </div>
-<div id="app1">
-    <h1>Vue Mart</h1>
-    <h2>Shopping Cart</h2>
-    <ul>
-        <li v-for="item in shoppingCart" v-bind:key="item.label">
-            {{ item.label }} : {{ item.cost }}€
-        </li>
-    </ul>
-</div>
     <tr>
      <td>
       <img src="../assets/agro/product1.jpeg"><br>
-      <label>pizza de chez muzee wa rupara</label>
+      <label>pizza de chez muzee wa rupara</label><br>
+      <button  >Add to cart</button>
     </td>
     <td>
       <img src="../assets/agro/product2.jpg">
       <br>
       <label>Haricots de kirundo a bas prix</label>
+      <br>
+      <button  >Add to cart</button>
     </td>
     <td>
       <img src="../assets/agro/product3.jpg">
       <br>
       <label>Fameuse Riz de Gihanga au prix abordable</label>
+      <br>
+      <button  >Add to cart</button>
     </td>
     <td>
       <img src="../assets/agro/product1.jpeg">
       <br>
       <label>pizza du cafe gourmand le meuilleur</label>
+      <br>
+      <button  >Add to cart</button>
     </td>
   </tr>
 </template>
@@ -41,17 +39,10 @@ export default {
   props: {
     msg: String
   }
+
 }
-const app1 = new Vue({
-        el: '#app1',
-        data: {
-            shoppingCart: [
-                { label: 'Pommes', cost: 6 },
-                { label: 'Bananes', cost: 2 },
-                { label: 'Noix de coco', cost: 8 }
-            ]
-        }
-    })
+
+
 
 </script>
 
@@ -80,5 +71,9 @@ tr{
 }
 img{
   width: 80%;
+}
+button{
+  border-radius:30%;
+  background-color: rgb(23, 139, 233);
 }
 </style>
