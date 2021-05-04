@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" width="50px" src="../assets/yotta.jpg">
-    <HelloWorld msg="Welcome to Yotta market"/>
+    <HelloWorld msg="Welcome to Yotta market [UPDATED]"/>
   </div>
 </template>
 
