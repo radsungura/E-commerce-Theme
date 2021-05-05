@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}{{ product }}</h1>
+    <h2>{{ product }}{{ msg }}</h2>
 
   </div>
     <tr>
@@ -36,19 +37,21 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'HelloWorldUpdated',
   props: {
     msg: String
   },
    data() {
+<<<<<<< HEAD
     return { product : 'rad',src : '../assets/agro/product1.jpeg' 
     
+=======
+    return {
+      product = 'rad'
+>>>>>>> 14fc6906416698ebeb07c45f99c9ea166d67830e
     }
-
-}}
-
-
-
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
