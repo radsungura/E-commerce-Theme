@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }}{{ product }}</h1>
 
   </div>
     <tr>
@@ -31,6 +31,7 @@
       <button  >Add to cart</button>
     </td>
   </tr>
+  <v-card class="mx-auto" max-width="344" outlined> rad</v-card>
 </template>
 
 <script>
@@ -38,9 +39,12 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+   data() {
+    return { product = 'rad'
+    }
 
-}
+}}
 
 
 
@@ -76,6 +80,6 @@ button{
   border-radius:10%;
   background-color: rgb(23, 139, 233);
   color: aliceblue;
-  size:30px;
+  size:50px;
 }
 </style>
