@@ -31,7 +31,7 @@
       <button  >Add to cart</button>
     </td>
   </tr>
-  <v-card class="mx-auto" max-width="344" outlined> rad</v-card>
+  <v-card  max-width="344px" outlined> rad</v-card>
 </template>
 
 <script>
@@ -41,7 +41,8 @@ export default {
     msg: String
   },
    data() {
-    return { product = 'rad'
+    return { product : 'rad',src : '../assets/agro/product1.jpeg' 
+    
     }
 
 }}
