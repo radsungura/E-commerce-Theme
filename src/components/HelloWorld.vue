@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}{{ product }}</h1>
     <h2>{{ product }}{{ msg }}</h2>
-
+    <h3>Last updated by {{ name }}</h3>
   </div>
     <tr>
      <td>
@@ -39,16 +39,16 @@
 export default {
   name: 'HelloWorldUpdated',
   props: {
-    msg: String
+    msg: {
+      type: String,
+      default: ""
+    }
   },
    data() {
-<<<<<<< HEAD
-    return { product : 'rad',src : '../assets/agro/product1.jpeg' 
-    
-=======
-    return {
-      product = 'rad'
->>>>>>> 14fc6906416698ebeb07c45f99c9ea166d67830e
+    return { 
+      product : 'rad',
+      src : '../assets/agro/product1.jpeg',
+      name: "Grevisse"
     }
   }
 }
