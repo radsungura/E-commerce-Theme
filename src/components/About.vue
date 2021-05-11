@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="about">
+    <h1>{{ biography }}</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: 'About',
   props: {
-    msg: String
+    biography: String
   }
 }
 </script>
@@ -27,6 +27,9 @@ li {
   margin: 0 10px;
 }
 a {
+  color: #42b983;
+}
+.about{
   color: #42b983;
 }
 </style>

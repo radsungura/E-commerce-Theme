@@ -1,6 +1,9 @@
 <template>
   <div  id="nav">
-    <router-link to="/home">Home</router-link> |
+    <router-link to="/home">Home</router-link>  |
+    <router-link to="/detail">Detail</router-link>  |
+    <router-link to="/detail">Panier</router-link>  |
+    <router-link to="/detail">Pay</router-link>  |
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>
@@ -23,6 +26,8 @@
 #nav a {
   font-weight: bold;
   color:white;
+  margin-left: 20px;
+   margin-right: 20px;
 }
 
 #nav a.router-link-exact-active {

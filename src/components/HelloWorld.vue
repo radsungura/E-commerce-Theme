@@ -1,54 +1,41 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}{{ product }}</h1>
-    <h2>{{ product }}{{ msg }}</h2>
-
-  </div>
-    <tr>
-     <td>
-      <img src="../assets/agro/product1.jpeg"><br>
-      <label>pizza de chez muzee wa rupara</label><br>
-      <button  >Add to cart</button>
-    </td>
-    <td>
-      <img src="../assets/agro/product2.jpg">
+    <h1>{{ msg }}</h1>
+  </div><br>
+    <div class="block" v-for="item in products" v-bind:key="item.item" >
+      <div class="td">
+      <img :src="item.source">
       <br>
-      <label>Haricots de kirundo a bas prix</label>
-      <br>
-      <button  >Add to cart</button>
-    </td>
-    <td>
-      <img src="../assets/agro/product3.jpg">
-      <br>
-      <label>Fameuse Riz de Gihanga au prix abordable</label>
-      <br>
-      <button  >Add to cart</button>
-    </td>
-    <td>
-      <img src="../assets/agro/product1.jpeg">
-      <br>
-      <label>pizza du cafe gourmand le meuilleur</label>
-      <br>
-      <button  >Add to cart</button>
-    </td>
-  </tr>
-  <v-card  max-width="344px" outlined> rad</v-card>
+       <label class="name" for="product">{{item.item}}</label>
+      <label class="price" for="product">{{item.price}}BFI</label><br><br>
+      <button class="like" v-on:click="action">
+      like
+    </button>
+      <button class="see" v-on:click="action" >
+      see all
+    </button>
+      </div>
+    </div>
+    
 </template>
 
 <script>
 export default {
-  name: 'HelloWorldUpdated',
+  name: 'HelloWorld',
   props: {
     msg: String
   },
    data() {
-<<<<<<< HEAD
-    return { product : 'rad',src : '../assets/agro/product1.jpeg' 
-    
-=======
     return {
-      product = 'rad'
->>>>>>> 14fc6906416698ebeb07c45f99c9ea166d67830e
+     products:[ {item: 'pizza',price: 1500,desc:'the best pizza made in burundi with burundian products', source : require('@/assets/agro/product1.jpeg')},
+                {item: 'haricot',price: 1200,desc:'Haricots de kirundo ', source : require('@/assets/agro/product2.jpg') },
+                {item: 'riz',price: 1000,desc:'The best rice in burundi from Gihanga ', source : require('@/assets/agro/product3.jpg') },
+                {item: 'pizza',price: 2000,desc:'Delicious flavered and chip ', source : require('@/assets/agro/product1.jpeg') },
+                {item: 'pizza',price: 1500,desc:'the best pizza made in burundi with burundian products', source : require('@/assets/agro/product1.jpeg')},
+                {item: 'haricot',price: 1200,desc:'Haricots de kirundo ', source : require('@/assets/agro/product2.jpg') },
+                {item: 'riz',price: 1000,desc:'The best rice in burundi from Gihanga ', source : require('@/assets/agro/product3.jpg') },
+                {item: 'pizza',price: 2000,desc:'Delicious flavered and chip ', source : require('@/assets/agro/product1.jpeg') }
+                ]
     }
   }
 }
@@ -56,6 +43,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.price{
+ text-decoration:bold ;
+  
+ margin-left: 30%;
+}
+.name{
+ text-decoration:bold ;
+ margin-left: 0px;
+}
+.like{
+ margin-right: 30%;
+ width: 30%;
+ height:  45%;
+}
+.see{
+ background-color: forestgreen;
+ width: 30%;
+ height:  45%;
+}
+.logo {
+ width: 100px;
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -74,16 +83,31 @@ div {
   display:inline-block;
   margin: 0 10px;
 }
+.td{
+  background-color: rgb(231, 228, 228);
+  display: inline-block;
+   width:250px;
+}
+.block{
+  display: inline-block;
+ 
+}
 tr{
   width: 100%;
 }
 img{
-  width: 80%;
+  width: 100%;
 }
 button{
   border-radius:10%;
   background-color: rgb(23, 139, 233);
   color: aliceblue;
   size:50px;
+}
+.card{
+  border-radius:10%;
+  background-color: rgb(23, 139, 233);
+  color: aliceblue;
+  
 }
 </style>
