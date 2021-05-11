@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }}{{ nome }}</h1>
   </div><br>
     <div class="block" v-for="item in products" v-bind:key="item.item" >
       <div class="td">
@@ -38,6 +38,7 @@ export default {
                 ]
     }
   }
+
 }
 </script>
 

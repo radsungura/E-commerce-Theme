@@ -1,6 +1,6 @@
 <template>
 
-  <div v-for="item in products" v-bind:key="item.item">
+  <div v-for="item in products" v-bind:key="item.item" class="container">
   <div class="home" v-if="item.item==name">
     <img alt="Vue logo"  :src="item.source"><br>
     <label for="item">{{item.desc}}</label><br>
@@ -14,7 +14,7 @@
 export default {
    data() {
     return {
-        name:'riz',
+        name:'pizza',
         title:'DETAIL',
      products:[ {item: 'pizza',desc:'the best pizza made in burundi with burundian products', source : require('@/assets/agro/product1.jpeg')},
                 {item: 'haricot',desc:'Haricots de kirundo ', source : require('@/assets/agro/product2.jpg') },
@@ -32,5 +32,13 @@ img{
     border-radius:20px;
     position: relative;
     padding: 10px;
+}
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>
